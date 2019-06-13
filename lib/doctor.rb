@@ -31,6 +31,7 @@ end
 def patients
   binding.pry
 appointments.map do |appt|
+  binding.pry
   appt.patient
     end
   end
