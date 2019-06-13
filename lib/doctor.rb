@@ -1,4 +1,3 @@
-require 'pry'
 class Doctor
 
   attr_accessor :name, :patients
@@ -13,24 +12,19 @@ class Doctor
     Appointment.new(patient, self, date)
   end
 
-  def new_song(name, genre)
-   Song.new(name, self, genre)
-
+  def self.all
+    @@all
   end
 
-def self.all
-  @@all
-end
-
-def appointments
-  Appointment.all.select do |appt|
-    appt.doctor == self
+  def appointments
+    Appointment.all.select do |appt|
+      appt.doctor == self
+    end
   end
-end
 
-def patients
-appointments.map do |appt|
-  appt.patient
+  def patients
+    appointments.map do |appt|
+      appt.patient
     end
   end
 end
