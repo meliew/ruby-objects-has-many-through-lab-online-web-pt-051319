@@ -33,6 +33,7 @@ appointments.map do |appt|
   appt.patient
   end
 end
+binding.pry
 
 
 end
