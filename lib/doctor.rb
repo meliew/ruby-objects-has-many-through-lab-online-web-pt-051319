@@ -31,10 +31,6 @@ end
 def patients
 appointments.map do |appt|
   appt.patient
+    end
   end
-end
-binding.pry
-puts "patients"
-
-
 end
