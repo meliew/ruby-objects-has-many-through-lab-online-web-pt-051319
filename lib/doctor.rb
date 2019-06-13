@@ -36,5 +36,4 @@ appointments.map do |appt|
 end
 
 
-
 end
